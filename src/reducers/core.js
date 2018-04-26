@@ -1,4 +1,4 @@
-const { createActions, handleActions } = require("redux-actions");
+import { createActions, handleActions } from "redux-actions";
 
 const DEFAULT_STATE = {
 	energy: 0,

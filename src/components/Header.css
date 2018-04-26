@@ -2,3 +2,9 @@
 	border-bottom: 1px white solid;
 	padding: 2px;
 }
+
+.Header-section {
+	display: inline-block;
+	padding: 0.5rem;
+	border-right: 1px white solid;
+}

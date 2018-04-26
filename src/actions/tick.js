@@ -1,9 +1,9 @@
-const { modifyEnergy, modifyLight } = require("../reducers/core");
+import { modifyEnergy, modifyLight } from "../reducers/core";
 
-function tick() {
-	return (dispatch, getState) => {
-		const state = getState();
-		dispatch(modifyEnergy(state.deltas.energy));
-		dispatch(modifyLight(state.deltas.light));
-	};
-}
+const tick = () => (dispatch, getState) => {
+	const state = getState();
+	dispatch(modifyEnergy({ amount: state.deltas.energy }));
+	dispatch(modifyLight({ amount: state.deltas.light }));
+};
+
+export default tick;
